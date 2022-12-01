@@ -1,0 +1,21 @@
+create database ApartmentMaintenanceSystem;
+
+use ApartmentMaintenanceSystem;
+
+create table tenants(
+first_name char(20) not null,
+last_name char(20),
+phone_No long not null,
+Email_ID char(30),
+aadhar_No long not null,
+flat_No int not null ,
+date_of_joining date,
+PRIMARY KEY (flat_No),
+UNIQUE (flat_No)
+);
+
+create table adminDb(user_name char(20),password char(20));
+insert into adminDb values("admin","admin");
+
+create table userDb(flat_no int,user_name char(20),password char(20));
+
